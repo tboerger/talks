@@ -14,6 +14,11 @@
 <img src="images/01.png" style="height: 80%;" />
 <img src="images/02.png" style="height: 80%; position: absolute; right: 0; top: 7%;" />
 
+Note:
+* Help output improved a lot
+* Regrouped all commands
+* Will show only biggest differences
+
 
 <!-- .slide: data-state="normal" id="deprecated-proposal-command" data-timing="20s" -->
 ## `proposal` Command
@@ -53,6 +58,10 @@
 <img src="images/07.png" style="height: 80%;" />
 <img src="images/08.png" style="height: 80%; position: absolute; right: 0; top: 7%;" />
 
+Note:
+* Reorganized position of barclamp name
+* Changed default output format as well
+
 
 <!-- .slide: data-state="normal" id="deprecated-machines-command" data-timing="20s" -->
 ## `machines` Comamnd
@@ -65,6 +74,9 @@
 
 <img src="images/09.png" style="height: 80%;" />
 <img src="images/10.png" style="height: 80%; position: absolute; right: 0; top: 7%;" />
+
+Note:
+* Renamed to node to better match web UI
 
 
 <!-- .slide: data-state="normal" id="deprecated-machines-list" data-timing="20s" -->
@@ -105,6 +117,9 @@
 <img src="images/15.png" style="height: 80%;" />
 <img src="images/16.png" style="height: 80%; position: absolute; right: 0; top: 7%;" />
 
+Note:
+* Moved to node subcommand for better grouping
+
 
 <!-- .slide: data-state="normal" id="deprecated-elements-command" data-timing="20s" -->
 ## `elements` Command
@@ -117,6 +132,9 @@
 
 <img src="images/17.png" style="height: 80%;" />
 <img src="images/18.png" style="height: 80%; position: absolute; right: 0; top: 7%;" />
+
+Note:
+* Renamed to role to better match web UI
 
 
 <!-- .slide: data-state="normal" id="deprecated-element_node-command" data-timing="20s" -->
