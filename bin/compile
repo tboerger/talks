@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]
+then
+  echo "Usage: ${0} <path>"
+  exit 1
+fi
+
+safely() {
+  if ! "$@"; then
+    echo >&2 "Aborting due to failure of: $*"
+    exit 1
+  fi
+}
+
+safely sass --update ${1}/css/reveal-override.scss
