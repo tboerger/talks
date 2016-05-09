@@ -4,7 +4,7 @@ Here you can find talks and presentations created by me. Feel free to ask
 questions through the issue tracker or contact me by Email.
 
 * Crowbar
-  * Revamped CLI: [Slides](http://tboerger.github.io/crowbar/revamped-cli) - [Source](crowbar/revamped-cli)
+  * Revamped CLI: [Slides](http://tboerger.github.io/talks/crowbar/revamped-cli) - [Source](crowbar/revamped-cli)
 
 
 ## Contributing
