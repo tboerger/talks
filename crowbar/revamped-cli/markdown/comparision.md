@@ -29,7 +29,7 @@
 
 
 <!-- .slide: data-state="normal" id="deprecated-proposal-list" data-timing="20s" -->
-## Deprecated `proposal` Listing
+## `proposal` Listing
 
 <img src="images/05.png" style="height: 80%;" />
 
