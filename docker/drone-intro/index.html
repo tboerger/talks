@@ -1,0 +1,123 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css"/>
+    <link rel="stylesheet" href="css/reveal-override.css"/>
+
+    <script>
+      document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-menu-title="QR code" data-state="qrcode">
+          <div class="qrcode" id="qrcode-talk" />
+
+          <h3>
+            <a href="http://tboerger.github.io/talks/docker/drone-intro" target="_blank" id="talk">
+              http://tboerger.github.io/talks/docker/drone-intro
+            </a>
+          </h3>
+        </section>
+
+        <section data-markdown="markdown/intro.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="markdown/architecture.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="markdown/simple.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="markdown/matrix.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="markdown/deployments.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+        <section data-markdown="markdown/postscript.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+      </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+    <script src="qrcodejs/qrcode.js"></script>
+
+    <script>
+      var sources = document.getElementsByTagName('a');
+      n = sources.length;
+
+      for (var i = 0; i < n; i++) {
+        var source = sources[i];
+        var href = source.href;
+
+        if (href) {
+          var target_id = "qrcode-" + source.id ;
+          var target = document.getElementById(target_id);
+
+          if (target) {
+            var qr = new QRCode(target, {
+              colorDark : "#000000",
+              colorLight : "rgba(255,255,255,0)",
+            });
+
+            qr.makeCode(href);
+          }
+        }
+      }
+    </script>
+
+    <script>
+      Reveal.initialize({
+        width: 1600,
+        height: 900,
+
+        margin: 0.01,
+
+        controls: false,
+        slideNumber: true,
+        progress: true,
+        history: true,
+        center: false,
+
+        theme: Reveal.getQueryHash().theme,
+        transition: Reveal.getQueryHash().transition || 'none',
+
+        menu: {
+          themes: false,
+          transitions: false,
+          openButton: false,
+          openSlideNumber: true,
+          markers: true
+        },
+
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js-menu/menu.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+      // window.addEventListener(
+      //   "mousedown",
+      //   function(e) {
+      //     e.preventDefault();
+
+      //     if(e.button === 0) Reveal.next();
+      //     if(e.button === 2) Reveal.prev();
+      //   },
+      //   false
+      // );
+
+      // window.addEventListener(
+      //   "contextmenu",
+      //   function(e) {
+      //     e.preventDefault();
+      //   },
+      //   false
+      // );
+    </script>
+  </body>
+</html>
