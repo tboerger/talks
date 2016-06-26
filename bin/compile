@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [[ $# -ne 1 ]]
-then
-  echo "Usage: ${0} <path>"
-  exit 1
-fi
-
 safely() {
   if ! "$@"; then
     echo >&2 "Aborting due to failure of: $*"
@@ -13,4 +7,7 @@ safely() {
   fi
 }
 
-safely sass --update ${1}/css/reveal-override.scss
+for i in crowbar/revamped-cli docker/drone-intro
+do
+  safely sass --update ${i}/css/reveal-override.scss
+done

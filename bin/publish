@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [[ $# -ne 1 ]]
-then
-  echo "Usage: ${0} <path>"
-  exit 1
-fi
-
 safely() {
   if ! "$@"; then
     echo >&2 "Aborting due to failure of: $*"
@@ -16,9 +10,13 @@ safely() {
 safely git checkout gh-pages
 safely git reset --hard master
 
-safely sass --update ${1}/css/reveal-override.scss
+for i in crowbar/revamped-cli docker/drone-intro
+do
+  safely sass --update ${i}/css/reveal-override.scss
+  safely git add -f ${i}/css/*.css ${i}/css/*.map
 
-safely git add -f ${1}/css/*.css ${1}/css/*.map
-safely git commit -m "Latest .css and .css.map files within ${1} for publishing via gh-pages"
+  safely git commit -m "Latest .css and .css.map files within ${i} for publishing via gh-pages"
+done
+
 safely git push -f origin gh-pages
 safely git checkout -
