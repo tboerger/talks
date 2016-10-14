@@ -7,6 +7,8 @@ questions through the issue tracker or contact me by Email.
   * Revamped CLI: [Slides](http://tboerger.github.io/talks/crowbar/revamped-cli) - [Source](crowbar/revamped-cli)
 * Docker
   * Drone Intro: [Slides](http://tboerger.github.io/talks/docker/drone-intro) - [Source](docker/drone-intro)
+* Tools
+  * Traefik: [Slides](http://tboerger.github.io/talks/tools/traefik) - [Source](tools/traefik)
 
 
 ## Contributing
