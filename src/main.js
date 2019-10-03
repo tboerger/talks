@@ -30,8 +30,6 @@ Vue.config.productionTip = false
 Options.hljs = hljs
 
 let router = new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
   routes: Slides.List.map((slide) => {
     return {
       path: slide.infos.path,
