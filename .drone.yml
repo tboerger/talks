@@ -1,0 +1,50 @@
+---
+kind: pipeline
+type: docker
+name: testing
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: prepare
+  image: webhippie/nodejs:latest
+  pull: always
+  commands:
+  - yarn install --frozen-lockfile
+
+- name: lint
+  image: webhippie/nodejs:latest
+  pull: always
+  commands:
+  - yarn lint
+
+- name: build
+  image: webhippie/nodejs:latest
+  pull: always
+  commands:
+  - yarn build
+
+- name: publish
+  image: plugins/gh-pages:1
+  pull: always
+  settings:
+    username:
+      from_secret: github_username
+    password:
+      from_secret: github_token
+    pages_directory: dist/
+    temporary_base: tmp/
+  when:
+    event:
+      exclude:
+      - pull_request
+
+trigger:
+  ref:
+  - refs/heads/master
+  - refs/tags/**
+  - refs/pull/**
+
+...
