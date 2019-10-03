@@ -1,14 +1,21 @@
 # Talks
 
-Here you can find talks and presentations created by me. Feel free to ask
-questions through the issue tracker or contact me by Email.
+[![Build Status](https://cloud.drone.io/api/badges/tboerger/talks/status.svg)](https://cloud.drone.io/tboerger/talks)
 
-* Crowbar
-  * Revamped CLI: [Slides](http://tboerger.github.io/talks/crowbar/revamped-cli) - [Source](crowbar/revamped-cli)
-* Docker
-  * Drone Intro: [Slides](http://tboerger.github.io/talks/docker/drone-intro) - [Source](docker/drone-intro)
-* Tools
-  * Traefik: [Slides](http://tboerger.github.io/talks/tools/traefik) - [Source](tools/traefik)
+Within this repository I'm publishing the talks I plan to give or or gave in the past. The presentations are generated with [VueJS](https://vuejs.org/) and [DroneCI](https://drone.io/) is taking care about publishing them to my [GitHub page](http://tboerger.github.io/talks/).
+
+## Build
+
+This project requires NodeJS and Yarn to build the sources, the installation of NodeJS or Yarn won't be covered by these instructions, please follow the official documentation for [NodeJS](https://nodejs.org/en/download/package-manager/) and [Yarn](https://yarnpkg.com/lang/en/docs/install/). To build the sources just execute the following command after the setup:
+
+```
+yarn install
+yarn build
+```
+
+## Security
+
+If you find a security issue please contact thomas@webhippie.de first.
 
 
 ## Contributing
@@ -23,11 +30,11 @@ Fork -> Patch -> Push -> Pull Request
 
 ## License
 
-[Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+[CC-BY-SA-4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
 ## Copyright
 
 ```
-Copyright (c) 2016 Thomas Boerger <http://www.webhippie.de>
+Copyright (c) 2019 Thomas Boerger <thomas@webhippie.de>
 ```

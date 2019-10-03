@@ -1,0 +1,72 @@
+{
+  "private": true,
+  "name": "talks",
+  "version": "1.0.0",
+  "description": "Manage mod packs for Minecraft",
+  "homepage": "https://github.com/tboerger/talks#readme",
+  "license": "CC-BY-SA-4.0",
+  "author": "Thomas Boerger <thomas@webhippie.de>",
+  "repository": "https://github.com/tboerger/talks.git",
+  "bugs": {
+    "url": "https://github.com/tboerger/talks/issues",
+    "email": "thomas@webhippie.de"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3"
+  },
+  "devDependencies": {
+    "@getable/lato": "^1.0.1",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "animate.css": "^3.7.2",
+    "babel-eslint": "^10.0.1",
+    "buefy": "^0.8.4",
+    "chart.js": "^2.8.0",
+    "eagle.js": "^0.6.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "github-fork-ribbon-css": "^0.2.3",
+    "highlight.js": "^9.15.10",
+    "node-sass": "^4.9.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "rimraf": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "vue-ionicons": "^3.0.4",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
