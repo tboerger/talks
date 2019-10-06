@@ -2,7 +2,7 @@
   <div id="traefik">
     <div class="eg-slideshow">
       <slide enter="fadeIn" leave="fadeOut">
-        <img class="logo" alt="Traefik" src="./images/traefik.svg" />
+        <img class="logo" alt="Traefik" src="./assets/traefik.svg" />
 
         <h1 class="has-text-centered">
           Getting started with Traefik
@@ -38,7 +38,7 @@
         <br />
 
         <p>
-          <heart-icon /> Go + Containers + Drone CI, Automation addicted, Terraform and Ansible everywhere!
+          In love with Go + Containers, Automation addicted, Terraform and Ansible everywhere!
         </p>
       </slide>
 
@@ -76,7 +76,31 @@ export default {
   infos: {
     title: 'Getting started with Traefik',
     description: 'A presentation about the Traefik basics within 2.0',
-    path: '/getting-started-with-traefik'
+    path: '/getting-started-with-traefik/:slide/:step',
+    route: 'getting-started-with-traefik'
+  },
+  methods: {
+    updateSlides: function () {
+      this.currentSlideIndex = +this.$route.params.slide
+
+      this.$nextTick(() => {
+        this.step = +this.$route.params.step
+      })
+    },
+    updateURL: function () {
+      this.$router.push({
+        name: 'getting-started-with-traefik',
+        params: {
+          slide: this.currentSlideIndex,
+          step: this.step
+        }
+      })
+    }
+  },
+  watch: {
+    '$route': 'updateSlides',
+    step: 'updateURL',
+    currentSlideIndex: 'updateURL'
   }
 }
 </script>

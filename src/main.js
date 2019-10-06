@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Buefy from 'buefy'
 import Eagle, { Options } from 'eagle.js'
 import hljs from 'highlight.js'
+import ArrowDropRightIcon from 'vue-ionicons/dist/md-arrow-dropright'
 import HeartIcon from 'vue-ionicons/dist/md-heart'
 import GithubIcon from 'vue-ionicons/dist/logo-github'
 import TwitterIcon from 'vue-ionicons/dist/logo-twitter'
@@ -21,6 +22,7 @@ Vue.use(Router)
 Vue.use(Buefy)
 Vue.use(Eagle)
 
+Vue.component('arrow-icon', ArrowDropRightIcon)
 Vue.component('heart-icon', HeartIcon)
 Vue.component('twitter-icon', TwitterIcon)
 Vue.component('github-icon', GithubIcon)
@@ -32,6 +34,7 @@ Options.hljs = hljs
 let router = new Router({
   routes: Slides.List.map((slide) => {
     return {
+      name: slide.infos.route,
       path: slide.infos.path,
       component: slide
     }

@@ -2,7 +2,7 @@
   <div id="golang">
     <div class="eg-slideshow">
       <slide enter="fadeIn" leave="fadeOut">
-        <img class="logo" alt="Golang" src="./images/gopher.svg" />
+        <img class="logo" alt="Golang" src="./assets/gopher.svg" />
 
         <h1 class="has-text-centered">
           Best practices for Go services
@@ -38,7 +38,7 @@
         <br />
 
         <p>
-          <heart-icon /> Go + Containers + Drone CI, Automation addicted, Terraform and Ansible everywhere!
+          In love with Go + Containers, Automation addicted, Terraform and Ansible everywhere!
         </p>
       </slide>
 
@@ -76,7 +76,31 @@ export default {
   infos: {
     title: 'Best practices for Go services',
     description: 'A presentation about best practices for cloud-native Go services.',
-    path: '/best-practices-for-go'
+    path: '/best-practices-for-go/:slide/:step',
+    route: 'best-practices-for-go'
+  },
+  methods: {
+    updateSlides: function () {
+      this.currentSlideIndex = +this.$route.params.slide
+
+      this.$nextTick(() => {
+        this.step = +this.$route.params.step
+      })
+    },
+    updateURL: function () {
+      this.$router.push({
+        name: 'deep-dive-into-droneci',
+        params: {
+          slide: this.currentSlideIndex,
+          step: this.step
+        }
+      })
+    }
+  },
+  watch: {
+    '$route': 'updateSlides',
+    step: 'updateURL',
+    currentSlideIndex: 'updateURL'
   }
 }
 </script>
