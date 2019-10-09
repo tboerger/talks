@@ -1,1 +1,2 @@
-http://boerger-talks.netlify.com/* http://talks.boerger.ws/:splat 301!
+http://boerger-talks.netlify.com/* https://talks.boerger.ws/:splat 301!
+https://boerger-talks.netlify.com/* https://talks.boerger.ws/:splat 301!
