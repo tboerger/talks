@@ -76,31 +76,8 @@ export default {
   infos: {
     title: 'Getting started with Traefik',
     description: 'A presentation about the Traefik basics within 2.0',
-    path: '/getting-started-with-traefik/:slide/:step',
+    path: '/getting-started-with-traefik',
     route: 'getting-started-with-traefik'
-  },
-  methods: {
-    updateSlides: function () {
-      this.currentSlideIndex = +this.$route.params.slide
-
-      this.$nextTick(() => {
-        this.step = +this.$route.params.step
-      })
-    },
-    updateURL: function () {
-      this.$router.push({
-        name: 'getting-started-with-traefik',
-        params: {
-          slide: this.currentSlideIndex,
-          step: this.step
-        }
-      })
-    }
-  },
-  watch: {
-    '$route': 'updateSlides',
-    step: 'updateURL',
-    currentSlideIndex: 'updateURL'
   }
 }
 </script>

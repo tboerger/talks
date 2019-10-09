@@ -265,7 +265,7 @@
         </ul>
       </slide>
 
-      <slide class="smaller" enter="fadeIn" steps="2">
+      <slide class="smaller" enter="fadeIn" steps="8">
         <h3>
           Autoscaler
         </h3>
@@ -296,7 +296,7 @@
               <img class="provider" src="./assets/google.svg" alt="Google Cloud" />
             </div>
             <div class="column is-one-fourth is-size-4">
-              <img class="provider" src="./assets/hetzner.svg" alt="Hetzner Cloud" />
+              <img class="provider hetzner" src="./assets/hetzner.svg" alt="Hetzner Cloud" />
             </div>
           </div>
 
@@ -315,72 +315,417 @@
             </div>
           </div>
         </div>
+
+        <ul v-if="step >= 3">
+          <li v-if="step >= 4">
+            Autoscaler polls Drone API for queue size
+          </li>
+          <li v-if="step >= 5">
+            Queue is bigger than available worker slots
+          </li>
+          <li v-if="step >= 6">
+            Send cloud-init config to cloud provider
+          </li>
+          <li v-if="step >= 7">
+            Finish agent installation of server
+          </li>
+          <li v-if="step >= 8">
+            Agent pulls pipeline from queue
+          </li>
+        </ul>
       </slide>
 
-      <slide class="smaller" enter="fadeIn">
+      <slide class="smaller" enter="fadeIn" steps="4">
         <h3>
           Configuration
         </h3>
+
+        <eg-transition enter="fadeIn">
+          <div class="columns">
+            <div class="column is-one-third is-size-4" v-bind:style= "[step == 2 ? { backgroundColor: '#ccc' } : {}]">
+              <img class="provider yaml" src="./assets/yaml.svg" alt="YAML" />
+            </div>
+            <div class="column is-one-third is-size-4" v-bind:style= "[step == 3 ? { backgroundColor: '#ccc' } : {}]">
+              <img class="provider" src="./assets/starlark.svg" alt="Starlark" />
+            </div>
+            <div class="column is-one-third is-size-4" v-bind:style= "[step == 4 ? { backgroundColor: '#ccc' } : {}]">
+              <img class="provider" src="./assets/jsonnet.svg" alt="Jsonnet" />
+            </div>
+          </div>
+        </eg-transition>
+
+        <br />
+
+        <div enter="fadeIn" v-if="step == 1">
+          <ul>
+            <li>
+              Stored within the repository
+            </li>
+            <li>
+              Conditions for the whole pipeline or single steps
+            </li>
+            <li>
+              Parallelism by `depends_on` attribute
+            </li>
+            <li>
+              Every pipeline can use on services
+            </li>
+            <li>
+              Every pipeline can share volumes between steps
+            </li>
+            <li>
+              Could also be triggered by a built cron mechanism
+            </li>
+          </ul>
+        </div>
+
+        <div enter="fadeIn" v-if="step == 2">
+          <ul>
+            <li>
+              YAML is the defailt config format
+            </li>
+            <li>
+              Initially inspired by docker-compose
+            </li>
+            <li>
+              Moved to a Kubernetes-like format
+            </li>
+          </ul>
+
+          <br />
+
+          <p>
+            Example at <a href="https://gist.github.com/tboerger/b4e9368467e138b93a962c90a384c36e" target="_blank">https://gist.github.com/tboerger/b4e9368467e138b93a962c90a384c36e</a>
+          </p>
+        </div>
+
+        <div enter="fadeIn" v-if="step == 3">
+          <ul>
+            <li>
+              Initially tied to Bazel build system
+            </li>
+            <li>
+              Some Python dialect
+            </li>
+            <li>
+              Requires a separate convert extension
+            </li>
+            <li>
+              Does not support imports yet :(
+            </li>
+          </ul>
+
+          <br />
+
+          <p>
+            Example at <a href="https://gist.github.com/tboerger/d0b6cfc96d1cb1ff0a9abf18c7f2b971" target="_blank">https://gist.github.com/tboerger/d0b6cfc96d1cb1ff0a9abf18c7f2b971</a>
+          </p>
+        </div>
+
+        <div enter="fadeIn" v-if="step == 4">
+          <ul>
+            <li>
+              Wellknown in Kubernetes eco system
+            </li>
+            <li>
+              JSON on steroids (conditions, loops, templating)
+            </li>
+            <li>
+              Requires a separate convert extension
+            </li>
+            <li>
+              Does not support imports yet :(
+            </li>
+          </ul>
+
+          <br />
+
+          <p>
+            Example at <a href="https://gist.github.com/tboerger/55523d124c6b167d3c514f45ca095b04" target="_blank">https://gist.github.com/tboerger/55523d124c6b167d3c514f45ca095b04</a>
+          </p>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
           Plugins
         </h3>
+
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Standalone Docker image
+            </li>
+            <li>
+              Pre-defined set of commands to execute
+            </li>
+            <li>
+              Does not require `commands` attribute
+            </li>
+            <li>
+              Rich set of available plugins
+            </li>
+            <li>
+              Doing a single thing, do that thing well
+            </li>
+            <li>
+              Handle many kind of deployments
+            </li>
+            <li>
+              Handle many kind of notifications
+            </li>
+            <li>
+              Can be written in any language
+            </li>
+            <li>
+              Handle environment variables, use exit codes
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
           Extensions
         </h3>
+
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Dedicated tiny web services
+            </li>
+            <li>
+              Contacted via API from server
+            </li>
+            <li>
+              Configured by env variables within the server
+            </li>
+            <li>
+              Boilr template to build your own extension
+            </li>
+            <li>
+              Provides various hooks for customization:
+
+              <ul>
+                <li>
+                  Admission
+                </li>
+                <li>
+                  Config
+                </li>
+                <li>
+                  Converter
+                </li>
+                <li>
+                  Registry
+                </li>
+                <li>
+                  Secret
+                </li>
+                <li>
+                  Validator
+                </li>
+                <li>
+                  Webhook
+                </li>
+                <li>
+                  Metrics
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
           Secrets
         </h3>
+
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Could be set per repository <a href="https://docs.drone.io/configure/secrets/repository/" target="_blank" style="color: #ccc">Docs</a>
+            </li>
+            <li>
+              Org secrets only available to Drone admins <a href="https://docs.drone.io/configure/secrets/organization/" target="_blank" style="color: #ccc">Docs</a>
+            </li>
+            <li>
+              Builtin secrets are stored in database
+            </li>
+            <li>
+              Optionally encrypted within database
+            </li>
+            <li>
+              Optionally injected on pull requests
+            </li>
+            <li>
+              Alternatively could be commited encrypted <a href="https://docs.drone.io/configure/secrets/encrypted/" target="_blank" style="color: #ccc">Docs</a>
+            </li>
+            <li>
+              Extensions for external secrets
+
+              <ul>
+                <li>
+                  Hashicorp Vault <a href="https://docs.drone.io/configure/secrets/external/vault/" target="_blank" style="color: #ccc">Docs</a>
+                </li>
+                <li>
+                  AWS Secrets Manager <a href="https://docs.drone.io/configure/secrets/external/kubernetes/" target="_blank" style="color: #ccc">Docs</a>
+                </li>
+                <li>
+                  Kubernetes secrets <a href="https://docs.drone.io/configure/secrets/external/aws/" target="_blank" style="color: #ccc">Docs</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
           Runners
         </h3>
+
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Default runner is the agent, same as docker runner
+            </li>
+            <li>
+              Experiments with Nomad
+            </li>
+            <li>
+              Experiments with Kubernetes have been deprecated
+            </li>
+            <li>
+              Built with <a href="https://github.com/drone/runner-go" target="_blank">https://github.com/drone/runner-go</a>
+            </li>
+            <li>
+              Every runner provides a dashboard
+            </li>
+            <li>
+              Dedicated org for community contributed runners at <a href="https://github.com/drone-runners" target="_blank">https://github.com/drone-runners</a>
+            </li>
+            <li>
+              Already available runners are
+
+              <ul>
+                <li>
+                  Docker <a href="https://docs.drone.io/installation/runners/docker/" target="_blank" style="color: #ccc">Docs</a>
+                </li>
+                <li>
+                  Exec <a href="https://docs.drone.io/installation/runners/exec/" target="_blank" style="color: #ccc">Docs</a>
+                </li>
+                <li>
+                  SSH <a href="https://docs.drone.io/installation/runners/ssh/" target="_blank" style="color: #ccc">Docs</a>
+                </li>
+                <li>
+                  Digital Ocean <a href="https://docs.drone.io/installation/runners/digitalocean/" target="_blank" style="color: #ccc">Docs</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Planned: K8s, Virtualbox, Parallels, Qemu, GCP, AWS
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
           Runners: Docker
         </h3>
+
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Uses Docker images for every step
+            </li>
+            <li>
+              Could run everywhere where you got Docker
+            </li>
+            <li>
+              <strong>
+                <a href="https://gist.github.com/tboerger/4cb982e4130352c8a8e48a9dc3128d82" target="_blank">Example</a>
+              </strong>
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
           Runners: Exec
         </h3>
+
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Native execution on a host
+            </li>
+            <li>
+              Could run behind a router
+            </li>
+            <li>
+              Useful for workloads outside of Docker
+            </li>
+            <li>
+              <strong>
+                <a href="https://gist.github.com/tboerger/ebedd77794dce2b1f898a25f94114461" target="_blank">Example</a>
+              </strong>
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
           Runners: SSH
         </h3>
+
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Native execution on a host
+            </li>
+            <li>
+              Must be reachable from runner
+            </li>
+            <li>
+              Useful for workloads outside of Docker
+            </li>
+            <li>
+              Available on cloud.drone.io
+            </li>
+            <li>
+              Used to build Windows plugins for drone-plugins org
+            </li>
+            <li>
+              <strong>
+                <a href="https://gist.github.com/tboerger/e9d323ba779e3c2056a4ec3638f2e239" target="_blank">Example</a>
+              </strong>
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide class="smaller" enter="fadeIn">
         <h3>
-          Runners: Cloud
+          Runners: Digital Ocean
         </h3>
-      </slide>
 
-      <slide class="smaller" enter="fadeIn">
-        <h3>
-          Runners: Kubernetes
-        </h3>
-      </slide>
-
-      <slide class="smaller" enter="fadeIn">
-        <h3>
-          Cleanup
-        </h3>
+        <div enter="fadeIn">
+          <ul>
+            <li>
+              Launch a server per pipeline
+            </li>
+            <li>
+              <strong>
+                <a href="https://gist.github.com/tboerger/f9cdfcd46e83f14f9e0bdc9c85b99e12" target="_blank">Example</a>
+              </strong>
+            </li>
+          </ul>
+        </div>
       </slide>
 
       <slide id="questions" enter="fadeIn">
@@ -417,31 +762,8 @@ export default {
   infos: {
     title: 'Deep dive into DroneCI',
     description: 'A presentation about DroneCI and the available runners',
-    path: '/deep-dive-into-droneci/:slide/:step',
+    path: '/deep-dive-into-droneci',
     route: 'deep-dive-into-droneci'
-  },
-  methods: {
-    updateSlides: function () {
-      this.currentSlideIndex = +this.$route.params.slide
-
-      this.$nextTick(() => {
-        this.step = +this.$route.params.step
-      })
-    },
-    updateURL: function () {
-      this.$router.push({
-        name: 'deep-dive-into-droneci',
-        params: {
-          slide: this.currentSlideIndex,
-          step: this.step
-        }
-      })
-    }
-  },
-  watch: {
-    '$route': 'updateSlides',
-    step: 'updateURL',
-    currentSlideIndex: 'updateURL'
   }
 }
 </script>
@@ -478,6 +800,12 @@ export default {
     .provider {
       display: inherit;
       max-height: 150px;
+      margin: 0 auto;
+
+      &.yaml,
+      &.hetzner {
+        height: 150px;
+      }
     }
 
     .eg-slideshow {
@@ -501,6 +829,16 @@ export default {
     .eg-slide-content {
       width: 80%;
       margin: 0 auto;
+    }
+
+    .eg-modal {
+      .eg-code-block {
+
+        .comments-box,
+        .code-box {
+          width: 100%;
+        }
+      }
     }
 
     #intro {

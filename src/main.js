@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Buefy from 'buefy'
-import Eagle, { Options } from 'eagle.js'
+import Eagle, { Options, Modal, CodeBlock } from 'eagle.js'
 import hljs from 'highlight.js'
 import ArrowDropRightIcon from 'vue-ionicons/dist/md-arrow-dropright'
 import HeartIcon from 'vue-ionicons/dist/md-heart'
@@ -22,13 +22,15 @@ Vue.use(Router)
 Vue.use(Buefy)
 Vue.use(Eagle)
 
+Eagle.use(Modal)
+Eagle.use(CodeBlock)
+
 Vue.component('arrow-icon', ArrowDropRightIcon)
 Vue.component('heart-icon', HeartIcon)
 Vue.component('twitter-icon', TwitterIcon)
 Vue.component('github-icon', GithubIcon)
 
 Vue.config.productionTip = false
-
 Options.hljs = hljs
 
 let router = new Router({

@@ -30,7 +30,7 @@
           </div>
           <div class="card-content">
             <h3>
-              <router-link :to="{ name: slideshow.infos.route, params: { slide: 1, step: 1 } }">
+              <router-link :to="{ name: slideshow.infos.route }">
                 {{ slideshow.infos.title }}
               </router-link>
             </h3>

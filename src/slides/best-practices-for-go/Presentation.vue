@@ -76,31 +76,8 @@ export default {
   infos: {
     title: 'Best practices for Go services',
     description: 'A presentation about best practices for cloud-native Go services.',
-    path: '/best-practices-for-go/:slide/:step',
+    path: '/best-practices-for-go',
     route: 'best-practices-for-go'
-  },
-  methods: {
-    updateSlides: function () {
-      this.currentSlideIndex = +this.$route.params.slide
-
-      this.$nextTick(() => {
-        this.step = +this.$route.params.step
-      })
-    },
-    updateURL: function () {
-      this.$router.push({
-        name: 'deep-dive-into-droneci',
-        params: {
-          slide: this.currentSlideIndex,
-          step: this.step
-        }
-      })
-    }
-  },
-  watch: {
-    '$route': 'updateSlides',
-    step: 'updateURL',
-    currentSlideIndex: 'updateURL'
   }
 }
 </script>
