@@ -368,7 +368,7 @@
               Parallelism by `depends_on` attribute
             </li>
             <li>
-              Every pipeline can use on services
+              Every pipeline can use own services
             </li>
             <li>
               Every pipeline can share volumes between steps
