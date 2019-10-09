@@ -2,7 +2,7 @@
 
 [![Build Status](https://cloud.drone.io/api/badges/tboerger/talks/status.svg)](https://cloud.drone.io/tboerger/talks)
 
-Within this repository I'm publishing the talks I plan to give or or gave in the past. The presentations are generated with [VueJS](https://vuejs.org/) and [DroneCI](https://drone.io/) is taking care about publishing them to my [GitHub page](https://tboerger.github.io/talks/).
+Within this repository I'm publishing the talks I plan to give or or gave in the past. The presentations are generated with [VueJS](https://vuejs.org/) and [DroneCI](https://drone.io/) is taking care about publishing them to my [website](https://talks.boerger.ws/).
 
 ## Build
 

@@ -27,15 +27,13 @@ steps:
   - yarn build
 
 - name: publish
-  image: plugins/gh-pages:1
+  image: lucap/drone-netlify:latest
   pull: always
   settings:
-    username:
-      from_secret: github_username
-    password:
-      from_secret: github_token
-    pages_directory: dist/
-    temporary_base: tmp/
+    token:
+      from_secret: netlify_token
+    site_id: d523079f-b914-438b-b6da-f3c3eeae6d49
+    path: dist/
   when:
     event:
       exclude:
