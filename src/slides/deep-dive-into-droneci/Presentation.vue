@@ -62,31 +62,31 @@
         <br />
 
         <div class="columns">
-          <div class="column is-one-third is-size-4" v-if="step >= 3">
-            <img class="image is-64x64" src="./assets/many-source-code-managers.svg" />
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 3">
+            <img class="image is-64x64 provider" src="./assets/many-source-code-managers.svg" />
             Many SCMs
           </div>
-          <div class="column is-one-third is-size-4" v-if="step >= 4">
-            <img class="image is-64x64" src="./assets/any-platform.svg" />
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 4">
+            <img class="image is-64x64 provider" src="./assets/any-platform.svg" />
             Any platform
           </div>
-          <div class="column is-one-third is-size-4" v-if="step >= 5">
-            <img class="image is-64x64" src="./assets/any-language.svg" />
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 5">
+            <img class="image is-64x64 provider" src="./assets/any-language.svg" />
             Any language
           </div>
         </div>
 
         <div class="columns">
-          <div class="column is-one-third is-size-4" v-if="step >= 6">
-            <img class="image is-64x64" src="./assets/simple-configuration.svg" />
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 6">
+            <img class="image is-64x64 provider" src="./assets/simple-configuration.svg" />
             Simple config
           </div>
-          <div class="column is-one-third is-size-4" v-if="step >= 7">
-            <img class="image is-64x64" src="./assets/isolated-builds.svg" />
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 7">
+            <img class="image is-64x64 provider" src="./assets/isolated-builds.svg" />
             Isolated builds
           </div>
-          <div class="column is-one-third is-size-4" v-if="step >= 8">
-            <img class="image is-64x64" src="./assets/effortless-scaling.svg" />
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 8">
+            <img class="image is-64x64 provider" src="./assets/effortless-scaling.svg" />
             Effortless scaling
           </div>
         </div>
@@ -94,13 +94,13 @@
         <br />
 
         <div class="columns">
-          <div class="column is-one-third is-size-4" v-if="step >= 9">
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 9">
             <arrow-icon /> Configuration as code
           </div>
-          <div class="column is-one-third is-size-4" v-if="step >= 10">
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 10">
             <arrow-icon /> Create and share plugins
           </div>
-          <div class="column is-one-third is-size-4" v-if="step >= 11">
+          <div class="column is-one-third is-size-4 has-text-centered" v-if="step >= 11">
             <arrow-icon /> Customize when needed
           </div>
         </div>
