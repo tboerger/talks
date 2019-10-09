@@ -639,10 +639,19 @@
         <div enter="fadeIn">
           <ul>
             <li>
+              Standard runtime used by agents
+            </li>
+            <li>
               Uses Docker images for every step
             </li>
             <li>
               Could run everywhere where you got Docker
+            </li>
+            <li>
+              Manually scaleable
+            </li>
+            <li>
+              Effortless scale with autoscaler
             </li>
             <li>
               <strong>
@@ -667,7 +676,10 @@
               Could run behind a router
             </li>
             <li>
-              Useful for workloads outside of Docker
+              Useful for workloads outside of containers
+            </li>
+            <li>
+              Also useful for platforms like macOS, Windows, BSD
             </li>
             <li>
               <strong>
@@ -686,13 +698,16 @@
         <div enter="fadeIn">
           <ul>
             <li>
-              Native execution on a host
+              Native execution on remote host
             </li>
             <li>
               Must be reachable from runner
             </li>
             <li>
-              Useful for workloads outside of Docker
+              Works on any platform that provides an SSH server
+            </li>
+            <li>
+              Useful for workloads outside of containers
             </li>
             <li>
               Available on cloud.drone.io
