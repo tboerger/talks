@@ -36,7 +36,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "github-fork-ribbon-css": "^0.2.3",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "node-sass": "^4.9.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
