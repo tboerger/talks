@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build --base /infra-with-crossplane/ --out ../../dist/infra-with-crossplane",
+    "export": "slidev export --output ../../dist/infra-with-crossplane/slides.pdf"
+  }
+}

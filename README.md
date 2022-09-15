@@ -1,40 +1,32 @@
 # Talks
 
-[![Build Status](https://cloud.drone.io/api/badges/tboerger/talks/status.svg)](https://cloud.drone.io/tboerger/talks)
+[![Build](https://github.com/tboerger/talks/actions/workflows/build.yml/badge.svg)](https://github.com/tboerger/talks/actions/workflows/build.yml)
 
-Within this repository I'm publishing the talks I plan to give or or gave in the past. The presentations are generated with [VueJS](https://vuejs.org/) and [DroneCI](https://drone.io/) is taking care about publishing them to my [website](https://talks.boerger.ws/).
-
-## Build
-
-This project requires NodeJS and Yarn to build the sources, the installation of NodeJS or Yarn won't be covered by these instructions, please follow the official documentation for [NodeJS](https://nodejs.org/en/download/package-manager/) and [Yarn](https://yarnpkg.com/lang/en/docs/install/). To build the sources just execute the following command after the setup:
-
-```
-yarn install
-yarn build
-```
+Within this repository I'm publishing the talks I plan to give or or gave in the
+past. The presentations are generated with [Slidev][slidev] and published by
+GitHub actions to Netlify accessible through my website [website][website].
 
 ## Security
 
-If you find a security issue please contact thomas@webhippie.de first.
-
+If you find a security issue please contact thomas@boerger.ws first.
 
 ## Contributing
 
 Fork -> Patch -> Push -> Pull Request
 
-
 ## Authors
 
-* [Thomas Boerger](https://github.com/tboerger)
-
+*   [Thomas Boerger](https://github.com/tboerger)
 
 ## License
 
 [CC-BY-SA-4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 
-
 ## Copyright
 
+```console
+Copyright (c) 2019 Thomas Boerger <thomas@boerger.ws>
 ```
-Copyright (c) 2019 Thomas Boerger <thomas@webhippie.de>
-```
+
+[slidev]: https://sli.dev/
+[website]: https://talks.boerger.ws/

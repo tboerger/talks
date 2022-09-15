@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build --base /hijack-a-kubernetes-cluster/ --out ../../dist/hijack-a-kubernetes-cluster",
+    "export": "slidev export --output ../../dist/hijack-a-kubernetes-cluster/slides.pdf"
+  }
+}
