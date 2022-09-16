@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build --base /kubernetes-on-hetzner/ --out ../../dist/kubernetes-on-hetzner",
+    "export": "slidev export --output ../../dist/kubernetes-on-hetzner/slides.pdf"
+  }
+}

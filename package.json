@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "talks",
+  "version": "1.0.0",
+  "description": "Collection of talks I have prepared or done so far",
+  "homepage": "https://github.com/tboerger/talks#readme",
+  "license": "CC-BY-SA-4.0",
+  "author": "Thomas Boerger <thomas@boerger.ws>",
+  "repository": "https://github.com/tboerger/talks.git",
+  "bugs": {
+    "url": "https://github.com/tboerger/talks/issues",
+    "email": "thomas@boerger.ws"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "pnpm -r run build",
+    "export": "pnpm -r run export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.36.5",
+    "qrious": "^4.0.2",
+    "slidev-theme-meetup": "^1.1.0",
+    "vite-svg-loader": "^3.6.0"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.32",
+    "github-fork-ribbon-css": "^0.2.3",
+    "playwright-chromium": "^1.25.2",
+    "pnpm": "^7.11.0",
+    "rimraf": "^3.0.2"
+  }
+}
