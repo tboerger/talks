@@ -42,7 +42,12 @@ layout: center
 <img src="/shared/applause.jpg" class="w-m inline-block">
 
 ---
-layout: qrcode
-url: https://talks.boerger.ws/kubernetes-on-hetzner/
+layout: center
 ---
 # Link to slides
+
+<img src="/images/qrcode.png" class="m-auto block h-95">
+
+<!--
+Generated at https://goqr.me/
+-->
