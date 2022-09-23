@@ -49,19 +49,36 @@ layout: default
 ---
 layout: default
 ---
-# Requirements
+# Crossplane vs. Terraform (1/3)
 
-- Obviously a running Kubernetes setup
-- You really need Kubectl
-- Optionally install the Crossplane plugin for Kubectl
-- Know how to correctly edit YAML files!
+<img src="/images/terraform.png" class="m-auto block h-95">
+
+> Source: https://blog.crossplane.io/crossplane-vs-terraform/
+
+---
+layout: default
+---
+# Crossplane vs. Terraform (2/3)
+
+<img src="/images/crossplane.png" class="m-auto block h-95">
+
+> Source: https://blog.crossplane.io/crossplane-vs-terraform/
+
+---
+layout: default
+---
+# Crossplane vs. Terraform (3/3)
+
+<img src="/images/combined.png" class="m-auto block h-95">
+
+> Source: https://blog.crossplane.io/crossplane-vs-terraform/
 
 ---
 layout: default
 ---
 # Crossplane Architecture
 
-<img src="/architecture.png" class="m-auto block h-100">
+<img src="/images/architecture.png" class="m-auto block h-95">
 
 ---
 layout: default
@@ -69,23 +86,30 @@ layout: default
 
 # Resource Types
 
-<img src="/resources.png" class="m-auto block h-100">
-
-<!--
-
--->
+<img src="/images/resources.png" class="m-auto block h-95">
 
 ---
 layout: default
 ---
 # Resource Lifecycle
 
-<img src="/lifecycle.png" class="m-auto block h-100">
+<img src="/images/lifecycle.png" class="m-auto block h-95">
+
+---
+layout: default
+---
+# Requirements for Crossplane
+
+- Obviously a running Kubernetes cluster (single node also works)
+- You really need Kubectl
+- Optionally install the Crossplane plugin for Kubectl
+- Know how to correctly edit YAML files!
+- Some basic knowledge to apply Kubernetes manifests
 
 ---
 layout: window
 ---
-# Install Crossplane core
+# Install Crossplane Core
 
 ::window::
 
@@ -103,228 +127,147 @@ NAME: crossplane
 LAST DEPLOYED: Tue Sep 20 15:57:26 2022
 NAMESPACE: crossplane-system
 STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-NOTES:
-Release: crossplane
+
+$ kubectl create namespace crossplane-demo
+namespace/crossplane-demo created
 ```
-
-
-
-
-
-
-
-
-
-
-
 
 ---
 layout: window
 ---
-# Install AWS provider (1/x)
+# Prepare Provider for AWS
 
 ::window::
 
 ```text
-$ cat <<EOF | kubectl -n crossplane-system apply -f -
-apiVersion: pkg.crossplane.io/v1
-kind: Provider
-metadata:
-  name: provider-aws
-spec:
-  package: "crossplane/provider-aws:v0.32.0"
-EOF
+$ kubectl -n crossplane-system create secret generic aws-creds \
+  --from-file=creds=aws-creds.conf
+secret/aws-creds created
 
+$ kubectl apply -f snippets/aws.yml
 provider.pkg.crossplane.io/provider-aws created
+providerconfig.aws.crossplane.io/default created
 
-$ kubectl -n crossplane-system get providers provider-aws
-NAME           INSTALLED   HEALTHY   PACKAGE                           AGE
-provider-aws   True        True      crossplane/provider-aws:v0.32.0   99s
+$ kubectl -n crossplane-system get providers,pod -l pkg.crossplane.io/provider=provider-aws
+NAME                                      INSTALLED   HEALTHY   PACKAGE                           AGE
+provider.pkg.crossplane.io/provider-aws   True        True      crossplane/provider-aws:v0.32.0   1337s
 
-$ kubectl -n crossplane-system get pod -l pkg.crossplane.io/provider=provider-aws
-NAME                                         READY   STATUS    RESTARTS   AGE
-provider-aws-f8b40345edc7-7d4855c74d-dqf52   1/1     Running   0          2s
-```
-
----
-layout: window
----
-
-# Install AWS provider (2/x)
-
-::window::
-
-```text
-$ cat <<EOF | kubectl -n crossplane-system apply -f -
-apiVersion: v1
-kind: Secret
-metadata:
-  name: aws-creds
-type: Opaque
-data:
-  creds: BASE64_ENCODED_CREDENTIALS
-EOF
+NAME                                             READY   STATUS    RESTARTS   AGE
+pod/provider-aws-f8b40345edc7-869f679894-rmnkj   1/1     Running   0          1337s
 ```
 
 ::bottom::
-
-<br>
-
-```text
-[default]
-aws_access_key_id =
-aws_secret_access_key =
-```
+> **You can find the snippet at https://github.com/tboerger/talks/tree/master/topics/infra-with-crossplane/snippets/aws.yml**
 
 <!--
-Retrieve credentials: gopass cat root/aws/creds | base64 -w0
+- gopass cat root/crossplane-demo/aws | kubectl -n crossplane-system create secret generic aws-creds --from-file=creds=/dev/stdin
+- kubectl apply -f https://raw.githubusercontent.com/tboerger/talks/master/topics/infra-with-crossplane/snippets/aws.yml
 -->
 
 ---
 layout: window
 ---
-# Install AWS provider (3/x)
+# Create Database on AWS
 
 ::window::
 
 ```text
-$ cat <<EOF | kubectl -n crossplane-system apply -f -
-apiVersion: aws.crossplane.io/v1beta1
-kind: ProviderConfig
-metadata:
-  name: default
-spec:
-  credentials:
-    source: Secret
-    secretRef:
-      namespace: crossplane-system
-      name: aws-creds
-      key: creds
-EOF
+$ kubectl apply -f snippets/awsdb.yml
+rdsinstance.database.aws.crossplane.io/crossplane-demo created
 
-$ kubectl get providerconfigs.aws.crossplane.io -o name
-providerconfig.aws.crossplane.io/default
+$ kubectl get rdsinstance.database.aws.crossplane.io/crossplane-demo
+NAME              READY   SYNCED   STATE       ENGINE     VERSION   AGE
+crossplane-demo   True    True     available   postgres   13.7      1337s
+
+$ kubectl -n crossplane-demo get secret aws-postgres
+NAME           TYPE                                DATA   AGE
+aws-postgres   connection.crossplane.io/v1alpha1   4      1337s
 ```
 
+::bottom::
+> **You can find the snippet at https://github.com/tboerger/talks/tree/master/topics/infra-with-crossplane/snippets/awsdb.yml**
 
+<!--
+- kubectl apply -f https://raw.githubusercontent.com/tboerger/talks/master/topics/infra-with-crossplane/snippets/awsdb.yml
+- kubectl  -n crossplane-demo get secret aws-postgres -o yaml
+- kubectl delete -f https://raw.githubusercontent.com/tboerger/talks/master/topics/infra-with-crossplane/snippets/awsdb.yml
+-->
 
+---
+layout: default
+---
+# Final PostgreSQL on AWS
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="/images/aws.png" class="w-m inline-block bg-current">
 
 ---
 layout: window
 ---
-# Install Azure provider (1/x)
+# Prepare Provider for Azure
 
 ::window::
 
 ```text
-$ cat <<EOF | kubectl -n crossplane-system apply -f -
-apiVersion: pkg.crossplane.io/v1
-kind: Provider
-metadata:
-  name: provider-azure
-spec:
-  package: "crossplane/provider-azure:v0.19.0"
-EOF
+$ kubectl -n crossplane-system create secret generic azure-creds \
+  --from-file=creds=azure-creds.json
+secret/azure-creds created
 
+$ kubectl apply -f snippets/azure.yml
 provider.pkg.crossplane.io/provider-azure created
+providerconfig.azure.crossplane.io/default created
 
-$ kubectl -n crossplane-system get providers provider-azure
-NAME             INSTALLED   HEALTHY   PACKAGE                             AGE
-provider-azure   True        True      crossplane/provider-azure:v0.19.0   98s
+$ kubectl -n crossplane-system get providers,pod -l pkg.crossplane.io/provider=provider-azure
+NAME                                        INSTALLED   HEALTHY   PACKAGE                             AGE
+provider.pkg.crossplane.io/provider-azure   True        True      crossplane/provider-azure:v0.19.0   1337s
 
-$ kubectl -n crossplane-system get pod -l pkg.crossplane.io/provider=provider-azure
-NAME                                           READY   STATUS    RESTARTS   AGE
-provider-azure-4e71f9c5dcc1-856ff49c6d-bwp47   1/1     Running   0          61s
-```
-
----
-layout: window
----
-# Install Azure provider (2/x)
-
-::window::
-
-```text
-$ cat <<EOF | kubectl -n crossplane-system apply -f -
-apiVersion: v1
-kind: Secret
-metadata:
-  name: azure-creds
-type: Opaque
-data:
-  creds: BASE64_ENCODED_CREDENTIALS
-EOF
+NAME                                              READY   STATUS    RESTARTS   AGE
+pod/provider-azure-4e71f9c5dcc1-867bd7cd6-k7n7b   1/1     Running   0          1337s
 ```
 
 ::bottom::
-
-<br>
-
-```text
-{
-  "appId": "",
-  "displayName": "",
-  "password": "",
-  "tenant": ""
-}
-```
+> **You can find the snippet at https://github.com/tboerger/talks/tree/master/topics/infra-with-crossplane/snippets/azure.yml**
 
 <!--
-Retrieve credentials: gopass cat root/azure/creds | base64 -w0
+- gopass cat root/crossplane-demo/azure | kubectl -n crossplane-system create secret generic azure-creds --from-file=creds=/dev/stdin
+- kubectl apply -f https://raw.githubusercontent.com/tboerger/talks/master/topics/infra-with-crossplane/snippets/azure.yml
 -->
 
 ---
 layout: window
 ---
-# Install Azure provider (3/x)
+# Create Database on Azure
 
 ::window::
 
 ```text
-$ cat <<EOF | kubectl -n crossplane-system apply -f -
-apiVersion: azure.crossplane.io/v1beta1
-kind: ProviderConfig
-metadata:
-  name: default
-spec:
-  credentials:
-    source: Secret
-    secretRef:
-      namespace: crossplane-system
-      name: azure-creds
-      key: creds
-EOF
+$ kubectl apply -f snippets/azuredb.yml
+resourcegroup.azure.crossplane.io/crossplane-demo created
+postgresqlserver.database.azure.crossplane.io/crossplane-demo created
 
-$ kubectl get providerconfigs.azure.crossplane.io -o name
-providerconfigs.azure.crossplane.io/default
+$ kubectl get postgresqlserver.database.azure.crossplane.io/crossplane-demo
+NAME              READY   SYNCED   VERSION   AGE
+crossplane-demo   True    True     11        1337s
+
+$ kubectl -n crossplane-demo get secret azure-postgres
+NAME             TYPE                                DATA   AGE
+azure-postgres   connection.crossplane.io/v1alpha1   4      1337s
 ```
 
+::bottom::
+> **You can find the shortlink targets at https://github.com/tboerger/talks/tree/master/topics/infra-with-crossplane/snippets/azuredb.yml**
 
+<!--
+- kubectl apply -f https://raw.githubusercontent.com/tboerger/talks/master/topics/infra-with-crossplane/snippets/azuredb.yml
+- kubectl  -n crossplane-demo get secret azure-postgres -o yaml
+- kubectl delete -f https://raw.githubusercontent.com/tboerger/talks/master/topics/infra-with-crossplane/snippets/azuredb.yml
+-->
 
+---
+layout: default
+---
+# Final PostgreSQL on Azure
 
-
-
-
-
+<img src="/images/azure.png" class="text-center w-m inline-block bg-current">
 
 ---
 layout: center

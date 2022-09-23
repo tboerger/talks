@@ -1,0 +1,43 @@
+---
+apiVersion: azure.crossplane.io/v1alpha3
+kind: ResourceGroup
+
+metadata:
+  name: crossplane-demo
+
+spec:
+  location: westeurope
+  providerConfigRef:
+    name: default
+
+...
+---
+apiVersion: database.azure.crossplane.io/v1beta1
+kind: PostgreSQLServer
+
+metadata:
+  name: crossplane-demo
+
+spec:
+  forProvider:
+    version: "11"
+    administratorLogin: oper
+    location: westeurope
+    sslEnforcement: Disabled
+    resourceGroupNameRef:
+      name: crossplane-demo
+    sku:
+      capacity: 1
+      family: Gen5
+      tier: Basic
+    storageProfile:
+      storageMB: 5120
+
+  providerConfigRef:
+    name: default
+
+  writeConnectionSecretToRef:
+    name: azure-postgres
+    namespace: crossplane-demo
+
+...

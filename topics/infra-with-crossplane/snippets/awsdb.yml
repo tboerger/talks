@@ -1,0 +1,26 @@
+---
+apiVersion: database.aws.crossplane.io/v1beta1
+kind: RDSInstance
+
+metadata:
+  name: crossplane-demo
+
+spec:
+  forProvider:
+    allocatedStorage: 10
+    dbInstanceClass: db.t3.small
+    engine: postgres
+    masterUsername: oper
+    publiclyAccessible: false
+    region: eu-west-1
+    storageType: gp2
+    skipFinalSnapshotBeforeDeletion: true
+
+  providerConfigRef:
+    name: default
+
+  writeConnectionSecretToRef:
+    name: aws-postgres
+    namespace: crossplane-demo
+
+...
