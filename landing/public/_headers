@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'
+  Content-Security-Policy: default-src 'self';font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com
   X-Frame-Options: DENY
   X-Xss-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
