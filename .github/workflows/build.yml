@@ -31,6 +31,9 @@ jobs:
       - name: Run export
         run: npm run export
 
+      - name: Run redirs
+        run: npm run redirs
+
       - name: Deploy website
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         env:

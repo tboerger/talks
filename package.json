@@ -14,7 +14,8 @@
   "scripts": {
     "clean": "rimraf dist/",
     "build": "pnpm -r run build",
-    "export": "pnpm -r run export"
+    "export": "pnpm -r run export",
+    "redirs": "find dist -iname _redirects | grep -v dist/_redirects | xargs cat >> dist/_redirects"
   },
   "dependencies": {
     "@slidev/cli": "0.36.5",
