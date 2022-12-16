@@ -24,7 +24,7 @@
     "vite-svg-loader": "3.6.0"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "1.1.37",
+    "@iconify-json/mdi": "1.1.38",
     "github-fork-ribbon-css": "0.2.3",
     "playwright-chromium": "1.28.1",
     "pnpm": "7.18.2",
