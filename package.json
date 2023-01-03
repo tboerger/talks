@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@slidev/cli": "0.38.2",
+    "@vitejs/plugin-vue": "^4.0.0",
     "qrious": "4.0.2",
     "slidev-theme-meetup": "1.2.0",
     "vite-svg-loader": "4.0.0"
