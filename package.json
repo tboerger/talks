@@ -18,10 +18,10 @@
     "redirs": "find dist -iname _redirects | grep -v dist/_redirects | xargs cat >> dist/_redirects"
   },
   "dependencies": {
-    "@slidev/cli": "0.40.13",
+    "@slidev/cli": "0.40.16",
     "@vitejs/plugin-vue": "^4.0.0",
     "qrious": "4.0.2",
-    "slidev-theme-meetup": "1.2.0",
+    "slidev-theme-meetup": "1.2.1",
     "vite-svg-loader": "4.0.0"
   },
   "devDependencies": {
