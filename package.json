@@ -27,7 +27,7 @@
   "devDependencies": {
     "@iconify-json/mdi": "1.1.52",
     "github-fork-ribbon-css": "0.2.3",
-    "playwright-chromium": "1.34.0",
+    "playwright-chromium": "1.34.1",
     "pnpm": "8.5.1",
     "rimraf": "5.0.1"
   }
