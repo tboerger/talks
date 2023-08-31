@@ -21,7 +21,7 @@
     "@slidev/cli": "0.42.11",
     "@vitejs/plugin-vue": "^4.0.0",
     "qrious": "4.0.2",
-    "slidev-theme-meetup": "1.4.5",
+    "slidev-theme-meetup": "1.4.6",
     "vite-svg-loader": "4.0.0"
   },
   "devDependencies": {
