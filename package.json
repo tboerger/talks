@@ -22,7 +22,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "qrious": "4.0.2",
     "slidev-theme-meetup": "1.5.3",
-    "vite-svg-loader": "5.0.1"
+    "vite-svg-loader": "5.1.0"
   },
   "devDependencies": {
     "@iconify-json/mdi": "1.1.55",
