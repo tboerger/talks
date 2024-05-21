@@ -28,7 +28,7 @@
     "@iconify-json/mdi": "1.1.66",
     "github-fork-ribbon-css": "0.2.3",
     "playwright-chromium": "1.44.0",
-    "pnpm": "9.1.1",
+    "pnpm": "9.1.2",
     "rimraf": "5.0.7"
   }
 }
