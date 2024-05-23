@@ -20,7 +20,7 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20.x
 
       - name: Install deps
         run: npm ci
@@ -39,7 +39,7 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        uses: netlify/actions/cli@master
+        uses: South-Paw/action-netlify-cli@v2
         with:
           args: deploy --prod --dir dist/
 
