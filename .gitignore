@@ -1,4 +1,8 @@
-node_modules
+.direnv
+.devenv
+
+/node_modules
 /dist
+/topics/*/node_modules
 
 components.d.ts
