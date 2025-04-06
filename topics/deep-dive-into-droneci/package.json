@@ -1,8 +1,0 @@
-{
-  "private": true,
-  "scripts": {
-    "dev": "slidev --open",
-    "build": "slidev build --base /deep-dive-into-droneci/ --out ../../dist/deep-dive-into-droneci",
-    "export": "slidev export --output ../../dist/deep-dive-into-droneci/slides.pdf"
-  }
-}

@@ -9,7 +9,7 @@ import topics from '../../topics/topics'
         Presentations by Thomas Boerger
       </h1>
       <h2 class="text-s pb-12">
-        Collection of talks I have prepared or done so far
+        Collection of presentations I have done somewhere in the world
       </h2>
 
       <a

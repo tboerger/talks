@@ -1,8 +1,9 @@
-.direnv
-.devenv
+.direnv/
+.devenv/
 
-/node_modules
-/dist
-/topics/*/node_modules
+node_modules/
+dist/
+topics/*/node_modules/
 
 components.d.ts
+.pre-commit-config.yaml
