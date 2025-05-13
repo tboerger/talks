@@ -12,7 +12,7 @@ importers:
         specifier: 51.6.0
         version: 51.6.0(@babel/parser@7.27.0)(@nuxt/kit@3.16.2)(@types/markdown-it@14.1.2)(@types/node@18.19.86)(@vue/compiler-sfc@3.5.13)(markdown-it-async@2.2.0)(playwright-chromium@1.52.0)(postcss@8.5.3)
       '@vitejs/plugin-vue':
-        specifier: ^5.2.4
+        specifier: ^5.2.3
         version: 5.2.4(vite@6.3.5(@types/node@18.19.86)(jiti@2.4.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       qrious:
         specifier: 4.0.2
@@ -37,8 +37,8 @@ importers:
         specifier: 1.52.0
         version: 1.52.0
       pnpm:
-        specifier: 10.10.0
-        version: 10.10.0
+        specifier: 10.11.0
+        version: 10.11.0
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -2246,8 +2246,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  pnpm@10.10.0:
-    resolution: {integrity: sha512-1hXbJG/nDyXc/qbY1z3ueCziPiJF48T2+Igkn7VoFJMYY33Kc8LFyO8qTKDVZX+5VnGIv6tH9WbR7mzph4FcOQ==}
+  pnpm@10.11.0:
+    resolution: {integrity: sha512-ZUBYP0HMX2KOs9l3Ps7oAvT575kjzEW2mJD7R5kdSwkpZGlOw6T3OKQgyRijMwYsi5JdMS9C5PDCY+tgNVH5dw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -5600,7 +5600,7 @@ snapshots:
 
   playwright-core@1.52.0: {}
 
-  pnpm@10.10.0: {}
+  pnpm@10.11.0: {}
 
   points-on-curve@0.2.0: {}
 
