@@ -37,8 +37,8 @@ importers:
         specifier: 1.53.1
         version: 1.53.1
       pnpm:
-        specifier: 10.12.1
-        version: 10.12.1
+        specifier: 10.12.2
+        version: 10.12.2
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -2281,8 +2281,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  pnpm@10.12.1:
-    resolution: {integrity: sha512-8N2oWA8O6UgcXHmh2Se5Fk8sR46QmSrSaLuyRlpzaYQ5HWMz0sMnkTV4soBK8zR0ylVLopwEqLEwYKcXZ1rjrA==}
+  pnpm@10.12.2:
+    resolution: {integrity: sha512-oyVAGFuWTuMLtOl55AWtxq9ZImtDjuTMGfnodzZnpm0wL1v+5go508rGnjXkuW5winHdACt+k1nEESoXIqwyPw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -5695,7 +5695,7 @@ snapshots:
 
   playwright-core@1.53.1: {}
 
-  pnpm@10.12.1: {}
+  pnpm@10.12.2: {}
 
   points-on-curve@0.2.0: {}
 
