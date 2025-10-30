@@ -30,6 +30,6 @@
     "github-fork-ribbon-css": "0.2.3",
     "playwright-chromium": "1.56.1",
     "pnpm": "10.20.0",
-    "rimraf": "6.0.1"
+    "rimraf": "6.1.0"
   }
 }
