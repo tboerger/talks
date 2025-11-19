@@ -50,8 +50,8 @@ importers:
         version: 3.5.24(typescript@5.9.3)
     devDependencies:
       '@vitejs/plugin-vue':
-        specifier: 6.0.1
-        version: 6.0.1(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
+        specifier: 6.0.2
+        version: 6.0.2(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
       vite:
         specifier: 7.2.2
         version: 7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1)
@@ -494,6 +494,9 @@ packages:
   '@rolldown/pluginutils@1.0.0-beta.38':
     resolution: {integrity: sha512-N/ICGKleNhA5nc9XXQG/kkKHJ7S55u0x0XUJbbkmdCnFuoRkM1Il12q9q0eX19+M7KKUEPw/daUPIRnxhcxAIw==}
 
+  '@rolldown/pluginutils@1.0.0-beta.50':
+    resolution: {integrity: sha512-5e76wQiQVeL1ICOZVUg4LSOVYg9jyhGCin+icYozhsUzM+fHE7kddi1bdiE0jwVqTfkjba3jUFbEkoC9WkdvyA==}
+
   '@rollup/rollup-android-arm-eabi@4.50.1':
     resolution: {integrity: sha512-HJXwzoZN4eYTdD8bVV22DN8gsPCAj3V20NHKOs8ezfXanGpmVPR7kalUHd+Y31IJp9stdB87VKPFbsGY3H/2ag==}
     cpu: [arm]
@@ -920,6 +923,13 @@ packages:
 
   '@vitejs/plugin-vue@6.0.1':
     resolution: {integrity: sha512-+MaE752hU0wfPFJEUAIxqw18+20euHHdxVtMvbFcOEpjEyfqXH/5DCoTHiVJ0J29EhTJdoTkjEv5YBKU9dnoTw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
+      vue: ^3.2.25
+
+  '@vitejs/plugin-vue@6.0.2':
+    resolution: {integrity: sha512-iHmwV3QcVGGvSC1BG5bZ4z6iwa1SOpAPWmnjOErd4Ske+lZua5K9TtAVdx0gMBClJ28DViCbSmZitjWZsWO3LA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0
@@ -3340,6 +3350,8 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.0-beta.38': {}
 
+  '@rolldown/pluginutils@1.0.0-beta.50': {}
+
   '@rollup/rollup-android-arm-eabi@4.50.1':
     optional: true
 
@@ -3497,7 +3509,7 @@ snapshots:
       '@slidev/types': 52.9.0(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
       '@unocss/extractor-mdc': 66.5.5
       '@unocss/reset': 66.5.5
-      '@vitejs/plugin-vue': 6.0.1(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
+      '@vitejs/plugin-vue': 6.0.2(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
       '@vitejs/plugin-vue-jsx': 5.1.1(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
       ansis: 4.2.0
       chokidar: 4.0.3
@@ -3666,7 +3678,7 @@ snapshots:
     dependencies:
       '@antfu/utils': 9.3.0
       '@shikijs/markdown-it': 3.15.0(markdown-it-async@2.2.0)
-      '@vitejs/plugin-vue': 6.0.1(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
+      '@vitejs/plugin-vue': 6.0.2(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
       '@vitejs/plugin-vue-jsx': 5.1.1(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
       katex: 0.16.25
       mermaid: 11.12.1
@@ -4038,6 +4050,12 @@ snapshots:
   '@vitejs/plugin-vue@6.0.1(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.29
+      vite: 7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1)
+      vue: 3.5.24(typescript@5.9.3)
+
+  '@vitejs/plugin-vue@6.0.2(vite@7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.0-beta.50
       vite: 7.2.2(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1)
       vue: 3.5.24(typescript@5.9.3)
 
