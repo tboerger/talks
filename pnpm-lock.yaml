@@ -18,8 +18,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2
       slidev-theme-meetup:
-        specifier: 3.9.0
-        version: 3.9.0(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
+        specifier: 3.9.1
+        version: 3.9.1(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
       vite-plugin-windicss:
         specifier: ^1.9.4
         version: 1.9.4(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
@@ -656,10 +656,6 @@ packages:
 
   '@slidev/rough-notation@0.1.0':
     resolution: {integrity: sha512-a/CbVmjuoO3E4JbUr2HOTsXndbcrdLWOM+ajbSQIY3gmLFzhjeXHGksGcp1NZ08pJjLZyTCxfz1C7v/ltJqycA==}
-
-  '@slidev/types@52.9.0':
-    resolution: {integrity: sha512-/kufKrKUHmPcuVgvs2jGYNasO55tDy2nAFe3YN6quRbZw5E0OnUJOvDoT3O/OIiE8DctWUu3N/C1TQgMJoa21A==}
-    engines: {node: '>=18.0.0'}
 
   '@slidev/types@52.9.1':
     resolution: {integrity: sha512-7Z9xAeozoZBwjYeN940sUmNb8LYD1xkqEGcVYMayhf/BwQeVcPV520AX+L4QsBcUnjCJrVBCA8iJPlVWJEPc/A==}
@@ -2372,8 +2368,8 @@ packages:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
 
-  slidev-theme-meetup@3.9.0:
-    resolution: {integrity: sha512-mzsk9MOM0xS8Xm6kSwNAyB6v5gQiKLQ0wsl3JH2mRIG8U3HX4q4rweIOHF32xKrjLSQTJDQdBaA3n3ge/NXLdg==}
+  slidev-theme-meetup@3.9.1:
+    resolution: {integrity: sha512-EdiMkK5QFTfUPZTOEZF+ktMIiAwYW8XTCUjgj2lnyetqeK5VIq3KC94IAzTJKAvnTmDbhZIMVMmAkVIYwfIUWA==}
     engines: {node: '>=22.0.0', slidev: '>=0.36.4'}
 
   source-map-js@1.2.1:
@@ -3581,40 +3577,6 @@ snapshots:
   '@slidev/rough-notation@0.1.0':
     dependencies:
       roughjs: 4.6.6
-
-  '@slidev/types@52.9.0(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))':
-    dependencies:
-      '@antfu/utils': 9.3.0
-      '@shikijs/markdown-it': 3.15.0(markdown-it-async@2.2.0)
-      '@vitejs/plugin-vue': 6.0.2(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
-      '@vitejs/plugin-vue-jsx': 5.1.1(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
-      katex: 0.16.25
-      mermaid: 11.12.1
-      monaco-editor: 0.54.0
-      shiki: 3.15.0
-      unocss: 66.5.5(postcss@8.5.6)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
-      unplugin-icons: 22.5.0(@vue/compiler-sfc@3.5.24)
-      unplugin-vue-markdown: 29.2.0(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
-      vite-plugin-inspect: 11.3.3(@nuxt/kit@3.16.2)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
-      vite-plugin-remote-assets: 2.1.0(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
-      vite-plugin-static-copy: 3.1.4(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
-      vite-plugin-vue-server-ref: 1.0.0(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3))
-      vue: 3.5.24(typescript@5.9.3)
-      vue-router: 4.6.3(vue@3.5.24(typescript@5.9.3))
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@svgr/core'
-      - '@svgx/core'
-      - '@unocss/webpack'
-      - '@vue/compiler-sfc'
-      - markdown-it-async
-      - postcss
-      - supports-color
-      - svelte
-      - typescript
-      - vite
-      - vue-template-compiler
-      - vue-template-es2015-compiler
 
   '@slidev/types@52.9.1(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))':
     dependencies:
@@ -5671,10 +5633,10 @@ snapshots:
   slash@5.1.0:
     optional: true
 
-  slidev-theme-meetup@3.9.0(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3)):
+  slidev-theme-meetup@3.9.1(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))(vue@3.5.24(typescript@5.9.3)):
     dependencies:
       '@iconify-json/mdi': 1.2.3
-      '@slidev/types': 52.9.0(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
+      '@slidev/types': 52.9.1(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.24)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.2.4(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.1))
       codemirror-theme-vars: 0.1.2
       qrious: 4.0.2
       vite-svg-loader: 5.1.0(vue@3.5.24(typescript@5.9.3))
