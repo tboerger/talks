@@ -1,7 +1,7 @@
 ---
 repository:
   name: talks
-  description: Talks for various events
+  description: Presentations for various events
   topics: presentation, talks, slides, slidev
 
   private: false
@@ -48,8 +48,6 @@ rulesets:
         parameters:
           strict_required_status_checks_policy: true
           required_status_checks:
-            - context: Semantic PR
-              integration_id: 198092
             - context: build
               integration_id: 15368
     bypass_actors:
