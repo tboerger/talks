@@ -17,10 +17,10 @@ jobs:
 
     steps:
       - name: Checkout source
-        uses: actions/checkout@v6
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
 
       - name: Setup nodejs
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6
         with:
           node-version: 24.x
 
@@ -41,7 +41,7 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        uses: South-Paw/action-netlify-cli@v2
+        uses: South-Paw/action-netlify-cli@0e5db3233380b841d6e0dfd3b1eef306c6c79735 # v2
         with:
           args: deploy --prod --dir dist/
 
