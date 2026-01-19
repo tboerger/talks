@@ -68,7 +68,8 @@
       ],
       "semanticCommitType": "ci",
       "semanticCommitScope": "tools",
-      "automerge": true
+      "automerge": true,
+      "pinDigests": false
     },
     {
       "description": "Semantic commits for tools updates",
