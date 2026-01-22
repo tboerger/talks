@@ -18,8 +18,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2
       slidev-theme-meetup:
-        specifier: 3.12.3
-        version: 3.12.3(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.27)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.3.1(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
+        specifier: 3.13.0
+        version: 3.13.0(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.27)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.3.1(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       vite-plugin-windicss:
         specifier: ^1.9.4
         version: 1.9.4(vite@7.3.1(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.2))
@@ -2381,8 +2381,8 @@ packages:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
 
-  slidev-theme-meetup@3.12.3:
-    resolution: {integrity: sha512-BEeECZym6gBHg9fk6+lzh+7Jzb9kutNVPLEbwrNKRXAUDCgm05rSYefKBNTHsmqXpM81epw4Q2yNPXOrQZfSYA==}
+  slidev-theme-meetup@3.13.0:
+    resolution: {integrity: sha512-roGfQ7HrTglX+8jbyOjafAs+ZzKHSIelBI+CakecxkL0jFG6zKeoFosPyVVglw2zKorSjkZCY0qTRctNECXO4w==}
     engines: {node: '>=22.0.0', slidev: '>=0.36.4'}
 
   source-map-js@1.2.1:
@@ -5679,7 +5679,7 @@ snapshots:
   slash@5.1.0:
     optional: true
 
-  slidev-theme-meetup@3.12.3(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.27)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.3.1(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3)):
+  slidev-theme-meetup@3.13.0(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.27)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.3.1(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3)):
     dependencies:
       '@iconify-json/mdi': 1.2.3
       '@slidev/types': 52.11.3(@nuxt/kit@3.16.2)(@vue/compiler-sfc@3.5.27)(markdown-it-async@2.2.0)(postcss@8.5.6)(typescript@5.9.3)(vite@7.3.1(@types/node@22.15.18)(jiti@2.6.1)(yaml@2.8.2))
