@@ -21,7 +21,7 @@
     "@slidev/cli": "52.12.0",
     "@vitejs/plugin-vue": "^6.0.0",
     "qrious": "4.0.2",
-    "slidev-theme-meetup": "3.13.2",
+    "slidev-theme-meetup": "3.14.0",
     "vite-plugin-windicss": "^1.9.4",
     "vite-svg-loader": "5.1.0"
   },
