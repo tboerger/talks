@@ -18,8 +18,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2
       slidev-theme-meetup:
-        specifier: 3.17.1
-        version: 3.17.1(@nuxt/kit@3.21.1)(@vue/compiler-sfc@3.5.29)(typescript@5.9.3)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.29(typescript@5.9.3))
+        specifier: 3.17.2
+        version: 3.17.2(@nuxt/kit@3.21.1)(@vue/compiler-sfc@3.5.29)(typescript@5.9.3)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.29(typescript@5.9.3))
       vite-plugin-windicss:
         specifier: ^1.9.4
         version: 1.9.4(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))
@@ -2562,8 +2562,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  slidev-theme-meetup@3.17.1:
-    resolution: {integrity: sha512-jlwhASttE3bFJhQhxIrKpFWvpixsRaSRAkPLm+pV/3P9AKSVNtjycSWb/oUjbdNfVmo4f8B8aAmWkFvQ8Knamw==}
+  slidev-theme-meetup@3.17.2:
+    resolution: {integrity: sha512-nGCrYIfv4ONoRRw2F6hUX1I0HKjNHW1BPF1eKIsdpUO+XkeW6x/vk1Qg1DzCRKuwwzsharR4scrkT5BqUf3Djw==}
     engines: {node: '>=22.0.0', slidev: '>=0.36.4'}
 
   source-map-js@1.2.1:
@@ -2853,11 +2853,6 @@ packages:
     resolution: {integrity: sha512-3t1AUVrs2XBXGc2BefRPRvy1CLy8qA/5A1J1Z73Ej1DIx+puXn39MQSWluxZ2FHEz8z9OEIvsoIIPc/s/P3OmQ==}
     peerDependencies:
       vite: '*'
-
-  vite-svg-loader@5.1.0:
-    resolution: {integrity: sha512-M/wqwtOEjgb956/+m5ZrYT/Iq6Hax0OakWbokj8+9PXOnB7b/4AxESHieEtnNEy7ZpjsjYW1/5nK8fATQMmRxw==}
-    peerDependencies:
-      vue: '>=3.2.13'
 
   vite-svg-loader@5.1.1:
     resolution: {integrity: sha512-RPzcXA/EpKJA0585x58DBgs7my2VfeJ+j2j1EoHY4Zh82Y7hV4cR1fElgy2aZi85+QSrcLLoTStQ5uZjD68u+Q==}
@@ -5977,13 +5972,13 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  slidev-theme-meetup@3.17.1(@nuxt/kit@3.21.1)(@vue/compiler-sfc@3.5.29)(typescript@5.9.3)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.29(typescript@5.9.3)):
+  slidev-theme-meetup@3.17.2(@nuxt/kit@3.21.1)(@vue/compiler-sfc@3.5.29)(typescript@5.9.3)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.29(typescript@5.9.3)):
     dependencies:
       '@iconify-json/mdi': 1.2.3
       '@slidev/types': 52.14.1(@nuxt/kit@3.21.1)(@vue/compiler-sfc@3.5.29)(typescript@5.9.3)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))
       codemirror-theme-vars: 0.1.2
       qrious: 4.0.2
-      vite-svg-loader: 5.1.0(vue@3.5.29(typescript@5.9.3))
+      vite-svg-loader: 5.1.1(vue@3.5.29(typescript@5.9.3))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@pinia/colada'
@@ -6349,11 +6344,6 @@ snapshots:
       windicss: 3.5.6
     transitivePeerDependencies:
       - supports-color
-
-  vite-svg-loader@5.1.0(vue@3.5.29(typescript@5.9.3)):
-    dependencies:
-      svgo: 3.3.3
-      vue: 3.5.29(typescript@5.9.3)
 
   vite-svg-loader@5.1.1(vue@3.5.29(typescript@5.9.3)):
     dependencies:
