@@ -50,8 +50,8 @@ importers:
         version: 3.5.30(typescript@5.9.3)
     devDependencies:
       '@vitejs/plugin-vue':
-        specifier: 6.0.4
-        version: 6.0.4(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
+        specifier: 6.0.5
+        version: 6.0.5(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
       vite:
         specifier: 7.3.1
         version: 7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2)
@@ -1078,6 +1078,13 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
+      vue: ^3.2.25
+
+  '@vitejs/plugin-vue@6.0.5':
+    resolution: {integrity: sha512-bL3AxKuQySfk1iGcBsQnoRVexTPJq0Z/ixFVM8OhVJAP6ZXXXLtM7NFKWhLl30Kg7uTBqIaPXbh+nuQCuBDedg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
       vue: ^3.2.25
 
   '@volar/language-core@2.4.28':
@@ -3700,7 +3707,7 @@ snapshots:
       '@slidev/types': 52.14.1(@nuxt/kit@3.21.1)(@vue/compiler-sfc@3.5.30)(typescript@5.9.3)(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))
       '@unocss/extractor-mdc': 66.6.6
       '@unocss/reset': 66.6.6
-      '@vitejs/plugin-vue': 6.0.4(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
+      '@vitejs/plugin-vue': 6.0.5(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
       '@vitejs/plugin-vue-jsx': 5.1.4(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
       ansis: 4.2.0
       chokidar: 5.0.0
@@ -3872,7 +3879,7 @@ snapshots:
     dependencies:
       '@antfu/utils': 9.3.0
       '@shikijs/markdown-it': 4.0.1
-      '@vitejs/plugin-vue': 6.0.4(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
+      '@vitejs/plugin-vue': 6.0.5(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
       '@vitejs/plugin-vue-jsx': 5.1.4(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
       katex: 0.16.38
       mermaid: 11.12.3
@@ -4228,6 +4235,12 @@ snapshots:
       - supports-color
 
   '@vitejs/plugin-vue@6.0.4(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.0-rc.2
+      vite: 7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2)
+      vue: 3.5.30(typescript@5.9.3)
+
+  '@vitejs/plugin-vue@6.0.5(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.2
       vite: 7.3.1(@types/node@22.19.15)(jiti@2.6.1)(yaml@2.8.2)
