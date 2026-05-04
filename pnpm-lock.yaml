@@ -18,8 +18,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2
       slidev-theme-meetup:
-        specifier: 3.17.3
-        version: 3.17.3(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3))
+        specifier: 3.18.0
+        version: 3.18.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3))
       vite-plugin-windicss:
         specifier: ^1.9.4
         version: 1.9.4(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
@@ -643,10 +643,6 @@ packages:
 
   '@slidev/rough-notation@0.1.0':
     resolution: {integrity: sha512-a/CbVmjuoO3E4JbUr2HOTsXndbcrdLWOM+ajbSQIY3gmLFzhjeXHGksGcp1NZ08pJjLZyTCxfz1C7v/ltJqycA==}
-
-  '@slidev/types@52.14.2':
-    resolution: {integrity: sha512-ucQbadhsg6IjidEmZevNGBxLlW6i2JS8YkIRwpFDKRMg7oJdi6mztp2Zq/Ca4hFdVr3iBo1Atny6ov0qUKE22A==}
-    engines: {node: '>=20.12.0'}
 
   '@slidev/types@52.15.0':
     resolution: {integrity: sha512-9ynICo+RogQeo7cke2Sod0yvIME4q+Qr9ln/6yzDDmPBJlO121SS+wGMV7QQLAFr2alnkNuwdclnbEjHuhSm8g==}
@@ -2470,8 +2466,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  slidev-theme-meetup@3.17.3:
-    resolution: {integrity: sha512-x05IwWBXc25PAfr9XzbWu0jgEzmGyvGrgtHzKkbaRkfwMSbUbzdKqGcW+Kk0rT6sEweUplgZW+Hqq//U2VMIpQ==}
+  slidev-theme-meetup@3.18.0:
+    resolution: {integrity: sha512-sHPgLZrjCTJ6GZO5hxG/Xht3soJ4MChYL1oKt7k0X8kvMRj3TWrzK5zVdjYOd8FvgUlPP60rG5Sh+GINrWlE4w==}
     engines: {node: '>=22.0.0', slidev: '>=0.36.4'}
 
   source-map-js@1.2.1:
@@ -2744,12 +2740,6 @@ packages:
     resolution: {integrity: sha512-8ajL5WG5BmYcC8zxeLOa3byCUG2AopKDAdNK7zStPHaRYYz1mxXBaeNFLu6vTEXj8UmXAsb5WlEmBBYwtlPEwA==}
     peerDependencies:
       vite: '>=5.0.0'
-
-  vite-plugin-static-copy@3.4.0:
-    resolution: {integrity: sha512-ekryzCw0ouAOE8tw4RvVL/dfqguXzumsV3FBKoKso4MQ1MUUrUXtl5RI4KpJQUNGqFEsg9kxl4EvDl02YtA9VQ==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    peerDependencies:
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
 
   vite-plugin-static-copy@4.1.0:
     resolution: {integrity: sha512-9XOarNV7LgP0KBB7AApxdgFikLXx3daZdqjC3AevYsL6MrUH62zphonLUs2a6LZc1HN1GY+vQdheZ8VVJb6dQQ==}
@@ -3678,43 +3668,6 @@ snapshots:
   '@slidev/rough-notation@0.1.0':
     dependencies:
       roughjs: 4.6.6
-
-  '@slidev/types@52.14.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))':
-    dependencies:
-      '@antfu/utils': 9.3.0
-      '@shikijs/markdown-it': 4.0.2
-      '@vitejs/plugin-vue': 6.0.6(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3))
-      '@vitejs/plugin-vue-jsx': 5.1.5(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3))
-      katex: 0.16.45
-      mermaid: 11.14.0
-      monaco-editor: 0.55.1
-      shiki: 4.0.2
-      unocss: 66.6.8(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
-      unplugin-icons: 23.0.1(@vue/compiler-sfc@3.5.33)
-      unplugin-vue-markdown: 30.0.0(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
-      vite-plugin-inspect: 11.3.3(@nuxt/kit@3.21.4)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
-      vite-plugin-remote-assets: 2.1.0(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
-      vite-plugin-static-copy: 3.4.0(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
-      vite-plugin-vue-server-ref: 1.0.0(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3))
-      vue: 3.5.33(typescript@5.9.3)
-      vue-router: 5.0.6(@vue/compiler-sfc@3.5.33)(vue@3.5.33(typescript@5.9.3))
-    transitivePeerDependencies:
-      - '@emnapi/core'
-      - '@emnapi/runtime'
-      - '@nuxt/kit'
-      - '@pinia/colada'
-      - '@svgr/core'
-      - '@svgx/core'
-      - '@unocss/astro'
-      - '@unocss/postcss'
-      - '@unocss/webpack'
-      - '@vue/compiler-sfc'
-      - markdown-it-async
-      - pinia
-      - supports-color
-      - svelte
-      - typescript
-      - vite
 
   '@slidev/types@52.15.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))':
     dependencies:
@@ -5864,10 +5817,10 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  slidev-theme-meetup@3.17.3(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3)):
+  slidev-theme-meetup@3.18.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3)):
     dependencies:
       '@iconify-json/mdi': 1.2.3
-      '@slidev/types': 52.14.2(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
+      '@slidev/types': 52.15.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@nuxt/kit@3.21.4)(@vue/compiler-sfc@3.5.33)(typescript@5.9.3)(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4))
       codemirror-theme-vars: 0.1.2
       qrious: 4.0.2
       vite-svg-loader: 5.1.1(vue@3.5.33(typescript@5.9.3))
@@ -6211,14 +6164,6 @@ snapshots:
       vite: 8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4)
     transitivePeerDependencies:
       - supports-color
-
-  vite-plugin-static-copy@3.4.0(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4)):
-    dependencies:
-      chokidar: 3.6.0
-      p-map: 7.0.4
-      picocolors: 1.1.1
-      tinyglobby: 0.2.16
-      vite: 8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4)
 
   vite-plugin-static-copy@4.1.0(vite@8.0.10(@types/node@22.19.17)(jiti@2.6.1)(yaml@2.8.4)):
     dependencies:
