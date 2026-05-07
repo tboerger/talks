@@ -3,4 +3,7 @@ packages:
   - landing/
   - topics/*/
 
+allowBuilds:
+  playwright-chromium: true
+
 ...
