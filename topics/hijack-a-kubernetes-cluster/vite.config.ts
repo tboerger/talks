@@ -10,4 +10,9 @@ export default defineConfig({
       'vue'
     ]
   },
+  server: {
+    fs: {
+      strict: false,
+    },
+  },
 })
