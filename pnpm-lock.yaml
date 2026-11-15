@@ -12,8 +12,8 @@ importers:
         specifier: 53.1.0
         version: 53.1.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.156.0)(@types/markdown-it@14.2.0)(@types/node@22.20.5)(@vitejs/devtools-kit@0.7.6(cac@7.1.0)(crossws@0.4.17(srvx@1.0.8))(srvx@1.0.8)(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.45)(cac@7.1.0)(crossws@0.4.17(srvx@1.0.8))(lightningcss@1.33.0)(markdown-it@14.3.3)(oxc-parser@0.153.0)(playwright-chromium@1.65.0)(postcss@8.5.32)(rolldown@1.2.19)(srvx@1.0.8)
       '@vitejs/plugin-vue':
-        specifier: ^6.0.0
-        version: 6.0.10(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
+        specifier: ^6.0.11
+        version: 6.0.11(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
       qrious:
         specifier: 4.0.2
         version: 4.0.2
@@ -1123,13 +1123,6 @@ packages:
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
       vue: ^3.0.0
-
-  '@vitejs/plugin-vue@6.0.10':
-    resolution: {integrity: sha512-b80aUQh3n+qEzzZm5oQp3rT2QImeCx58K6eFl/RkJ3d65KW0kTuv5lNsLRVAjbW9YRUpo/wzmvzMgV34bTAItA==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    peerDependencies:
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-      vue: ^3.2.25 || ^3.6.0-rc.10
 
   '@vitejs/plugin-vue@6.0.11':
     resolution: {integrity: sha512-m48lskIUJGlB6qUiYhDMI8nd2ngeidz2U4nKTjqI13cFMu5rH8JeEILPkDtK9Fk/TjBA2pkj8AlbenqDaKu+ww==}
@@ -3964,7 +3957,7 @@ snapshots:
       '@slidev/types': 53.1.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.156.0)(@vue/compiler-sfc@3.5.45)(cac@7.1.0)(crossws@0.4.17(srvx@1.0.8))(rolldown@1.2.19)(srvx@1.0.8)(typescript@6.0.3)(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))
       '@unocss/extractor-mdc': 66.12.0
       '@unocss/reset': 66.12.0
-      '@vitejs/plugin-vue': 6.0.10(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
+      '@vitejs/plugin-vue': 6.0.11(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
       '@vitejs/plugin-vue-jsx': 5.1.6(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
       ansis: 4.5.0
       chokidar: 6.0.0
@@ -4196,7 +4189,7 @@ snapshots:
     dependencies:
       '@antfu/utils': 9.3.0
       '@shikijs/markdown-it': 4.6.0
-      '@vitejs/plugin-vue': 6.0.10(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
+      '@vitejs/plugin-vue': 6.0.11(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
       '@vitejs/plugin-vue-jsx': 5.1.6(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
       katex: 0.18.10
       mermaid: 11.17.2
@@ -4246,7 +4239,7 @@ snapshots:
     dependencies:
       '@antfu/utils': 9.3.0
       '@shikijs/markdown-it': 4.6.0
-      '@vitejs/plugin-vue': 6.0.10(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
+      '@vitejs/plugin-vue': 6.0.11(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
       '@vitejs/plugin-vue-jsx': 5.1.6(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))
       katex: 0.19.1
       mermaid: 12.3.0
@@ -4709,12 +4702,6 @@ snapshots:
       vue: 3.5.45(typescript@6.0.3)
     transitivePeerDependencies:
       - supports-color
-
-  '@vitejs/plugin-vue@6.0.10(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))':
-    dependencies:
-      '@rolldown/pluginutils': 1.0.1
-      vite: 8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1)
-      vue: 3.5.45(typescript@6.0.3)
 
   '@vitejs/plugin-vue@6.0.11(vite@8.3.8(@types/node@22.20.5)(jiti@2.7.0)(yaml@2.9.1))(vue@3.5.45(typescript@6.0.3))':
     dependencies:
